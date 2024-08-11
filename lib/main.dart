@@ -1,8 +1,16 @@
+import 'package:codefury/screens/location.dart';
+import 'package:codefury/screens/sosscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'screens/authscreen.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, // Transparent status bar
+      statusBarIconBrightness: Brightness.dark, // Optional: dark icons
+    ));
   runApp(const MyApp());
 }
 
@@ -33,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AuthenticationPage(),
+      home: SOSScreen(),
     );
   }
 }
